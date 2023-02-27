@@ -16,7 +16,7 @@ for link in links:
         'job_title':content.find('div', attrs={'class':'leftColumn'}).find('h1').get_text(),
         'resume':content.find('div', attrs={'class':'normalText'}).get_text(),
     })
-    time.sleep(3)
+    time.sleep(3) 
 with open('resumeex.csv','w',encoding='utf-8',newline='') as csv_file:
     writer = csv.DictWriter(csv_file, fieldnames=results[0].keys())
     writer.writeheader()
